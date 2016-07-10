@@ -35,6 +35,7 @@ pogodba.metoda.sendTransaction([[ parametri ]], {from:eth.accounts[0], gas:30000
 
 # Viri
 
+- [Solidity dokumentacija](http://solidity.readthedocs.io/en/latest/index.html)
 - [Mist wallet](https://github.com/ethereum/mist/releases)
 - [Mix debugger](https://github.com/ethereum/webthree-umbrella/releases)
 - [Online solidity compiler](https://ethereum.github.io/browser-solidity/)
