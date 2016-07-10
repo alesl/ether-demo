@@ -1,0 +1,20 @@
+[Unit]
+Description=Ethereum's distributed currency daemon
+After=network.target
+
+[Service]
+User=vagrant
+Group=vagrant
+
+Type=simple
+ExecStart=/usr/local/bin/geth --etherbase '0x93598e23c2b9b4a53aae67e398a423c3065ebbd9' --genesis /vagrant/vagrant/genesis.json --rpc --networkid=39318 --maxpeers=0 --dev --mine --minerthreads 1 --verbosity 3 --solc "solc" --ipcpath /home/vagrant/.ethereum/geth.ipc
+
+Restart=on-abnormal
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=60s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
